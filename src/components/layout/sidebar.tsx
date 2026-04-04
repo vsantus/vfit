@@ -33,16 +33,16 @@ export function Sidebar() {
                 className={[
                   "group block rounded-[1.5rem] border px-4 py-4 transition-all duration-200",
                   active
-                    ? "border-primary/25 bg-linear-to-br from-primary/14 to-primary/6 text-foreground shadow-[0_16px_40px_rgba(104,255,182,0.08)]"
+                    ? "border-primary/25 bg-primary/9 text-foreground shadow-[0_14px_28px_rgba(12,18,26,0.18)]"
                     : "border-transparent bg-transparent text-muted-foreground hover:border-white/8 hover:bg-secondary/72 hover:text-foreground",
                 ].join(" ")}
               >
                 <div className="flex items-start gap-3">
                   <div
                     className={[
-                      "mt-0.5 flex size-11 items-center justify-center rounded-[1rem] border bg-background/70 transition-all",
+                      "mt-0.5 flex size-11 items-center justify-center rounded-[1rem] border bg-background/72 transition-all",
                       active
-                        ? "border-primary/20 text-primary shadow-[0_0_24px_rgba(104,255,182,0.16)]"
+                        ? "border-primary/18 bg-primary/8 text-primary shadow-[0_8px_18px_rgba(108,145,120,0.14)]"
                         : "border-white/8 text-muted-foreground group-hover:border-primary/12 group-hover:text-foreground",
                     ].join(" ")}
                   >
@@ -58,9 +58,9 @@ export function Sidebar() {
           })}
         </div>
 
-        <div className="mt-auto rounded-[1.6rem] border border-primary/20 bg-linear-to-br from-primary/12 to-transparent p-4">
+        <div className="mt-auto rounded-[1.6rem] border border-primary/18 bg-primary/8 p-4">
           <div className="flex items-start gap-3">
-            <div className="flex size-11 items-center justify-center rounded-[1rem] bg-primary/14 text-primary shadow-[0_0_24px_rgba(104,255,182,0.16)]">
+            <div className="flex size-11 items-center justify-center rounded-[1rem] border border-primary/18 bg-primary/10 text-primary shadow-[0_8px_18px_rgba(108,145,120,0.14)]">
               <ShieldCheck className="size-4" />
             </div>
             <div className="space-y-2">

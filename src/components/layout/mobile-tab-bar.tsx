@@ -17,7 +17,7 @@ export function MobileTabBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="surface-glow fixed inset-x-3 bottom-3 z-20 rounded-[1.75rem] border border-white/10 bg-card/92 p-2.5 backdrop-blur-2xl sm:inset-x-4 sm:bottom-4 xl:hidden">
+    <nav className="surface-glow fixed inset-x-3 bottom-3 z-20 rounded-[1.75rem] border border-white/8 bg-card/92 p-2.5 backdrop-blur-2xl sm:inset-x-4 sm:bottom-4 xl:hidden">
       <ul className="grid grid-cols-4 gap-1">
         {items.map((item) => {
           const Icon = item.icon;
@@ -30,7 +30,7 @@ export function MobileTabBar() {
                 className={cn(
                   "flex min-h-16 flex-col items-center justify-center gap-1 rounded-[1.2rem] px-2 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] transition-all",
                   active
-                    ? "bg-linear-to-b from-primary/18 to-primary/8 text-primary shadow-[0_0_24px_rgba(104,255,182,0.12)]"
+                    ? "bg-primary/10 text-primary shadow-[0_10px_22px_rgba(108,145,120,0.14)]"
                     : "text-muted-foreground hover:bg-secondary/70 hover:text-foreground",
                 )}
               >

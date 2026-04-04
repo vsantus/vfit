@@ -10,11 +10,11 @@ export function GlassPanel({ children, className }: GlassPanelProps) {
   return (
     <section
       className={cn(
-        "surface-glow relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-card/82 backdrop-blur-2xl",
+        "surface-glow relative overflow-hidden rounded-[1.75rem] border border-white/8 bg-card/84 backdrop-blur-2xl",
         className,
       )}
     >
-      <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/18 to-transparent" />
       {children}
     </section>
   );

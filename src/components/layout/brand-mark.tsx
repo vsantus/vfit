@@ -3,7 +3,7 @@ import { Dumbbell } from "lucide-react";
 export function BrandMark() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex size-12 items-center justify-center rounded-[1.35rem] border border-primary/30 bg-primary/12 text-primary shadow-[0_0_28px_rgba(104,255,182,0.22)]">
+      <div className="flex size-12 items-center justify-center rounded-[1.35rem] border border-primary/22 bg-primary/10 text-primary shadow-[0_10px_24px_rgba(108,145,120,0.14)]">
         <Dumbbell className="size-5.5" />
       </div>
       <div>
