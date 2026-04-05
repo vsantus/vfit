@@ -60,7 +60,7 @@ export function HistoryContent() {
         <GlassPanel className="p-6 sm:p-8">
           <div className="space-y-4">
             <p className="text-xs font-medium uppercase tracking-[0.24em] text-primary/75">Última sessão</p>
-            <div className="rounded-3xl border border-primary/20 bg-primary/10 p-5">
+            <div className="rounded-3xl border border-primary/20 bg-linear-to-br from-primary/12 to-accent/8 p-5">
               <p className="text-lg font-semibold text-foreground">
                 {history.lastCompletedWorkout?.workoutName ?? "Nenhuma sessão"}
               </p>

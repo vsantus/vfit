@@ -141,7 +141,7 @@ export function WorkoutDetail({ workoutId }: WorkoutDetailProps) {
           ) : null}
 
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-3xl border border-white/8 bg-background/40 p-5">
+            <div className="rounded-3xl border border-border/70 bg-card/72 p-5">
               <div className="flex items-center gap-3">
                 <CalendarDays className="size-4 text-primary" />
                 <div>
@@ -150,7 +150,7 @@ export function WorkoutDetail({ workoutId }: WorkoutDetailProps) {
                 </div>
               </div>
             </div>
-            <div className="rounded-3xl border border-white/8 bg-background/40 p-5">
+            <div className="rounded-3xl border border-border/70 bg-card/72 p-5">
               <div className="flex items-center gap-3">
                 <CalendarDays className="size-4 text-primary" />
                 <div>

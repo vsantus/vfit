@@ -146,13 +146,13 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-3xl border border-white/8 bg-background/40 p-5">
+            <div className="rounded-3xl border border-border/70 bg-card/72 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Progresso
               </p>
               <p className="mt-2 text-3xl font-semibold text-foreground">{progress}%</p>
             </div>
-            <div className="rounded-3xl border border-white/8 bg-background/40 p-5">
+            <div className="rounded-3xl border border-border/70 bg-card/72 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Exercícios concluídos
               </p>
@@ -160,7 +160,7 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
                 {completedCount}/{totalExercises}
               </p>
             </div>
-            <div className="rounded-3xl border border-white/8 bg-background/40 p-5">
+            <div className="rounded-3xl border border-border/70 bg-card/72 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Categoria
               </p>
@@ -180,7 +180,7 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
       <GlassPanel className={cn("p-6 sm:p-8", allCompleted && "border-primary/30 bg-primary/8")}>
         <div className="space-y-5">
           <div className="flex items-center gap-3">
-            <div className="flex size-12 items-center justify-center rounded-[1.1rem] border border-primary/20 bg-primary/10 text-primary shadow-[0_8px_18px_rgba(108,145,120,0.12)]">
+            <div className="flex size-12 items-center justify-center rounded-[1.1rem] border border-primary/20 bg-primary/10 text-primary shadow-[0_8px_18px_rgba(124,58,237,0.2)]">
               {allCompleted ? <Flame className="size-5" /> : <Dumbbell className="size-5" />}
             </div>
             <div>
@@ -207,8 +207,8 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
                   className={cn(
                     "flex w-full items-start gap-4 rounded-3xl border px-4 py-4 text-left transition-all",
                     checked
-                      ? "border-primary/22 bg-primary/10 shadow-[0_12px_28px_rgba(108,145,120,0.1)]"
-                      : "border-white/8 bg-background/40 hover:border-primary/12 hover:bg-background/55",
+                      ? "border-primary/22 bg-primary/10 shadow-[0_12px_28px_rgba(124,58,237,0.18)]"
+                      : "border-border/70 bg-card/70 hover:border-primary/12 hover:bg-card/86",
                   )}
                 >
                   <div className="pt-0.5 text-primary">
@@ -217,7 +217,7 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
                   <div className="min-w-0 flex-1 space-y-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <p className="text-base font-semibold text-foreground">{exercise.name}</p>
-                      <span className="rounded-full border border-white/8 bg-card/70 px-2 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                      <span className="rounded-full border border-border/70 bg-secondary/55 px-2 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
                         #{exercise.order + 1}
                       </span>
                     </div>

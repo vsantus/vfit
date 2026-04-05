@@ -1,15 +1,13 @@
 "use client";
 
-import { CalendarDays, Dumbbell, Flame, Plus, Trophy } from "lucide-react";
-import Link from "next/link";
+import { CalendarDays, Dumbbell, Flame, Trophy } from "lucide-react";
 
 import { DashboardEmptyState } from "@/components/dashboard/dashboard-empty-state";
 import { DashboardLoading } from "@/components/dashboard/dashboard-loading";
 import { SummaryCard } from "@/components/dashboard/summary-card";
 import { GlassPanel } from "@/components/layout/glass-panel";
-import { buttonVariants } from "@/components/ui/button-variants";
+import { WorkoutQuickActions } from "@/components/workouts/workout-quick-actions";
 import { useDashboardSummary } from "@/hooks/use-dashboard-summary";
-import { cn } from "@/lib/utils";
 
 const summaryIcons = {
   totalWorkouts: Dumbbell,
@@ -62,22 +60,14 @@ export function DashboardContent() {
                 Acompanhe volume de treinos cadastrados, último treino concluído e constância da sua sequência atual.
               </p>
             </div>
-            <Link
-              href="/treinos/novo"
-              className={cn(
-                buttonVariants({ className: "h-11 rounded-2xl bg-primary px-5 text-primary-foreground hover:bg-primary/90" }),
-              )}
-            >
-              <Plus className="size-4" />
-              Criar treino
-            </Link>
+            <WorkoutQuickActions />
           </div>
         </GlassPanel>
 
         <GlassPanel className="p-6 sm:p-8">
           <div className="space-y-4">
             <p className="text-xs font-medium uppercase tracking-[0.24em] text-primary/75">Última conclusão</p>
-            <div className="rounded-3xl border border-primary/20 bg-primary/10 p-5">
+            <div className="rounded-3xl border border-primary/20 bg-linear-to-br from-primary/12 to-accent/8 p-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-2">
                   <p className="text-lg font-semibold text-foreground">
@@ -89,7 +79,7 @@ export function DashboardContent() {
                       : "Finalize um treino para visualizar sua sessão mais recente."}
                   </p>
                 </div>
-                <div className="flex size-12 items-center justify-center rounded-2xl border border-primary/20 bg-background/70 text-primary">
+                <div className="flex size-12 items-center justify-center rounded-2xl border border-primary/20 bg-card/72 text-primary">
                   <CalendarDays className="size-5" />
                 </div>
               </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, ChartNoAxesCombined, Clock3, Layers3, ShieldCheck } from "lucide-react";
+import { ChartNoAxesCombined, Clock3, Layers3 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -34,7 +34,7 @@ export function Sidebar() {
                   "group block rounded-[1.5rem] border px-4 py-4 transition-all duration-200",
                   active
                     ? "border-primary/25 bg-primary/9 text-foreground shadow-[0_14px_28px_rgba(12,18,26,0.18)]"
-                    : "border-transparent bg-transparent text-muted-foreground hover:border-white/8 hover:bg-secondary/72 hover:text-foreground",
+                    : "border-transparent bg-transparent text-muted-foreground hover:border-border/80 hover:bg-secondary/72 hover:text-foreground",
                 ].join(" ")}
               >
                 <div className="flex items-start gap-3">
@@ -42,8 +42,8 @@ export function Sidebar() {
                     className={[
                       "mt-0.5 flex size-11 items-center justify-center rounded-[1rem] border bg-background/72 transition-all",
                       active
-                        ? "border-primary/18 bg-primary/8 text-primary shadow-[0_8px_18px_rgba(108,145,120,0.14)]"
-                        : "border-white/8 text-muted-foreground group-hover:border-primary/12 group-hover:text-foreground",
+                        ? "border-primary/18 bg-primary/8 text-primary shadow-[0_8px_18px_rgba(124,58,237,0.22)]"
+                        : "border-border/70 text-muted-foreground group-hover:border-primary/12 group-hover:text-foreground",
                     ].join(" ")}
                   >
                     <Icon className="size-4" />
@@ -56,24 +56,6 @@ export function Sidebar() {
               </Link>
             );
           })}
-        </div>
-
-        <div className="mt-auto rounded-[1.6rem] border border-primary/18 bg-primary/8 p-4">
-          <div className="flex items-start gap-3">
-            <div className="flex size-11 items-center justify-center rounded-[1rem] border border-primary/18 bg-primary/10 text-primary shadow-[0_8px_18px_rgba(108,145,120,0.14)]">
-              <ShieldCheck className="size-4" />
-            </div>
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-foreground">Dashboard conectado</p>
-              <p className="text-xs leading-5 text-muted-foreground/95">
-                As métricas agora leem Firestore para exibir treinos, última conclusão e streak atual.
-              </p>
-              <div className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Visão ativa
-                <ArrowUpRight className="size-3.5" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </GlassPanel>

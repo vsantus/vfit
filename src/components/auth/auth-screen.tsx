@@ -55,7 +55,7 @@ export function AuthScreen({ eyebrow, title, description, children }: AuthScreen
                 return (
                   <div
                     key={item.title}
-                    className="rounded-3xl border border-white/8 bg-background/40 p-5"
+                    className="rounded-3xl border border-border/70 bg-card/70 p-5"
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex size-11 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">

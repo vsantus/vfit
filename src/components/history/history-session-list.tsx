@@ -22,7 +22,7 @@ export function HistorySessionList({ sessions }: HistorySessionListProps) {
           {sessions.map((session) => (
             <div
               key={session.id}
-              className="rounded-3xl border border-white/8 bg-background/40 px-5 py-4"
+              className="rounded-3xl border border-border/70 bg-card/72 px-5 py-4"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="space-y-1">

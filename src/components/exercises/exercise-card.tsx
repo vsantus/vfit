@@ -24,7 +24,7 @@ export function ExerciseCard({
   onMoveDown,
 }: ExerciseCardProps) {
   return (
-    <div className="rounded-3xl border border-white/8 bg-background/40 p-5">
+    <div className="rounded-3xl border border-border/70 bg-card/72 p-5">
       <div className="space-y-4">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="space-y-2">
@@ -78,13 +78,13 @@ export function ExerciseCard({
         </div>
 
         <div className="grid gap-3 md:grid-cols-3">
-          <div className="rounded-2xl border border-white/8 bg-card/60 px-4 py-3 text-sm text-muted-foreground">
+          <div className="rounded-2xl border border-border/70 bg-secondary/50 px-4 py-3 text-sm text-muted-foreground">
             <span className="font-medium text-foreground">Series:</span> {exercise.sets}
           </div>
-          <div className="rounded-2xl border border-white/8 bg-card/60 px-4 py-3 text-sm text-muted-foreground">
+          <div className="rounded-2xl border border-border/70 bg-secondary/50 px-4 py-3 text-sm text-muted-foreground">
             <span className="font-medium text-foreground">Reps:</span> {exercise.reps}
           </div>
-          <div className="rounded-2xl border border-white/8 bg-card/60 px-4 py-3 text-sm text-muted-foreground">
+          <div className="rounded-2xl border border-border/70 bg-secondary/50 px-4 py-3 text-sm text-muted-foreground">
             <span className="inline-flex items-center gap-2 font-medium text-foreground">
               <TimerReset className="size-4 text-primary" />
               Descanso:
@@ -94,7 +94,7 @@ export function ExerciseCard({
         </div>
 
         <div className="grid gap-3">
-          <div className="rounded-2xl border border-white/8 bg-card/60 px-4 py-3 text-sm text-muted-foreground">
+          <div className="rounded-2xl border border-border/70 bg-secondary/50 px-4 py-3 text-sm text-muted-foreground">
             <span className="font-medium text-foreground">Observacoes:</span>{" "}
             {exercise.notes ?? "Sem observações para este exercício."}
           </div>

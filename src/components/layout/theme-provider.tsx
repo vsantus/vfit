@@ -54,7 +54,7 @@ function subscribe(onStoreChange: () => void) {
 }
 
 export function ThemeProvider({ children }: PropsWithChildren) {
-  const theme = useSyncExternalStore(
+  const theme = useSyncExternalStore<Theme>(
     subscribe,
     getStoredTheme,
     () => "dark",
