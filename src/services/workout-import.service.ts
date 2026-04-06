@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+import { normalizeWorkoutWeekday } from "@/lib/workouts/schedule";
 import { importedWorkoutPayloadSchema, type ImportedWorkout } from "@/lib/validations/workout-import";
 import { exercisesService } from "@/services/exercises.service";
 import { workoutsService } from "@/services/workouts.service";
@@ -62,6 +63,7 @@ function toWorkoutInput(workout: ImportedWorkout): WorkoutInput {
     name: workout.name,
     category: normalizeCategory(workout.category),
     description: buildDescription(workout),
+    weekday: normalizeWorkoutWeekday(workout.day),
   };
 }
 

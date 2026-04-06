@@ -13,6 +13,11 @@ import {
 
 import { getFirestoreDb } from "@/lib/firebase/client";
 import { isFirebaseConfigured } from "@/lib/firebase/config";
+import {
+  compareWorkoutsBySchedule,
+  extractWorkoutWeekday,
+  normalizeWorkoutWeekday,
+} from "@/lib/workouts/schedule";
 import type { Workout, WorkoutInput } from "@/types/workout";
 
 function assertFirebaseConfigured() {
@@ -30,11 +35,18 @@ function workoutDocument(userId: string, workoutId: string) {
 }
 
 function mapWorkout(workoutId: string, data: Record<string, unknown>): Workout {
+  const description =
+    typeof data.description === "string" && data.description.length > 0 ? data.description : null;
+  const weekday =
+    normalizeWorkoutWeekday(typeof data.weekday === "string" ? data.weekday : null) ??
+    extractWorkoutWeekday(description);
+
   return {
     id: workoutId,
     name: String(data.name ?? ""),
     category: String(data.category ?? "Personalizado") as Workout["category"],
-    description: typeof data.description === "string" && data.description.length > 0 ? data.description : null,
+    description,
+    weekday,
     userId: String(data.userId ?? ""),
     createdAt: data.createdAt && typeof data.createdAt === "object" && "toDate" in data.createdAt
       ? (data.createdAt as { toDate: () => Date }).toDate()
@@ -50,7 +62,7 @@ async function list(userId: string): Promise<Workout[]> {
 
   const snapshot = await getDocs(query(workoutsCollection(userId), orderBy("updatedAt", "desc")));
 
-  return snapshot.docs.map((item) => mapWorkout(item.id, item.data()));
+  return snapshot.docs.map((item) => mapWorkout(item.id, item.data())).sort(compareWorkoutsBySchedule);
 }
 
 async function getById(userId: string, workoutId: string): Promise<Workout | null> {
@@ -72,6 +84,7 @@ async function create(userId: string, input: WorkoutInput): Promise<string> {
     name: input.name,
     category: input.category,
     description: input.description?.trim() || null,
+    weekday: input.weekday ?? null,
     userId,
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
@@ -87,6 +100,7 @@ async function update(userId: string, workoutId: string, input: WorkoutInput): P
     name: input.name,
     category: input.category,
     description: input.description?.trim() || null,
+    weekday: input.weekday ?? null,
     updatedAt: serverTimestamp(),
   });
 }

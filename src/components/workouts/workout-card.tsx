@@ -28,8 +28,15 @@ export function WorkoutCard({ workout, onDelete }: WorkoutCardProps) {
       <div className="space-y-5">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-primary/80">
-              {workout.category}
+            <div className="flex flex-wrap gap-2">
+              <div className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-primary/80">
+                {workout.category}
+              </div>
+              {workout.weekday ? (
+                <div className="inline-flex rounded-full border border-border/70 bg-secondary/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                  {workout.weekday}
+                </div>
+              ) : null}
             </div>
             <div>
               <h2 className="text-lg font-semibold text-foreground">{workout.name}</h2>

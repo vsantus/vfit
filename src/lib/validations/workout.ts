@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { workoutWeekdays } from "@/lib/workouts/schedule";
+
 export const workoutCategories = [
   "Treino A",
   "Treino B",
@@ -25,6 +27,11 @@ export const workoutSchema = z.object({
     .trim()
     .max(240, "Use no maximo 240 caracteres na descricao.")
     .optional()
+    .or(z.literal("")),
+  weekday: z
+    .enum(workoutWeekdays)
+    .optional()
+    .nullable()
     .or(z.literal("")),
 });
 

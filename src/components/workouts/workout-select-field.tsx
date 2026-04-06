@@ -4,9 +4,10 @@ type SelectFieldProps = {
   onChange: (value: string) => void;
   options: readonly string[];
   error?: string;
+  placeholder?: string;
 };
 
-export function SelectField({ label, value, onChange, options, error }: SelectFieldProps) {
+export function SelectField({ label, value, onChange, options, error, placeholder }: SelectFieldProps) {
   return (
     <label className="block space-y-2">
       <span className="text-sm font-medium text-foreground">{label}</span>
@@ -15,6 +16,7 @@ export function SelectField({ label, value, onChange, options, error }: SelectFi
         onChange={(event) => onChange(event.target.value)}
         className="flex h-12 w-full rounded-2xl border border-border/80 bg-background/80 px-4 text-sm text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] transition-colors focus-visible:border-primary/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/12"
       >
+        {placeholder ? <option value="">{placeholder}</option> : null}
         {options.map((option) => (
           <option key={option} value={option}>
             {option}

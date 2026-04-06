@@ -11,6 +11,7 @@ import { GlassPanel } from "@/components/layout/glass-panel";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { SelectField } from "@/components/workouts/workout-select-field";
 import { useAuth } from "@/hooks/use-auth";
+import { workoutWeekdays } from "@/lib/workouts/schedule";
 import { workoutCategories, workoutSchema, type WorkoutFormValues } from "@/lib/validations";
 import { cn } from "@/lib/utils";
 import { workoutsService } from "@/services/workouts.service";
@@ -33,6 +34,7 @@ export function WorkoutForm({ mode, workout }: WorkoutFormProps) {
       name: workout?.name ?? "",
       category: workout?.category ?? "Treino A",
       description: workout?.description ?? "",
+      weekday: workout?.weekday ?? "",
     },
   });
 
@@ -47,7 +49,10 @@ export function WorkoutForm({ mode, workout }: WorkoutFormProps) {
     startTransition(async () => {
       try {
         if (mode === "create") {
-          const workoutId = await workoutsService.create(user.uid, values);
+          const workoutId = await workoutsService.create(user.uid, {
+            ...values,
+            weekday: values.weekday || null,
+          });
           router.replace(`/treinos/${workoutId}`);
           return;
         }
@@ -56,7 +61,10 @@ export function WorkoutForm({ mode, workout }: WorkoutFormProps) {
           throw new Error("Treino não encontrado para edição.");
         }
 
-        await workoutsService.update(user.uid, workout.id, values);
+        await workoutsService.update(user.uid, workout.id, {
+          ...values,
+          weekday: values.weekday || null,
+        });
         router.replace(`/treinos/${workout.id}`);
       } catch (error) {
         setSubmitError(workoutsService.getWorkoutErrorMessage(error));
@@ -94,6 +102,17 @@ export function WorkoutForm({ mode, workout }: WorkoutFormProps) {
             value={form.watch("category")}
             onChange={(value) =>
               form.setValue("category", value as WorkoutFormValues["category"], { shouldValidate: true })
+            }
+          />
+
+          <SelectField
+            label="Dia da semana"
+            error={form.formState.errors.weekday?.message}
+            options={workoutWeekdays}
+            placeholder="Sem dia definido"
+            value={form.watch("weekday") ?? ""}
+            onChange={(value) =>
+              form.setValue("weekday", value as WorkoutFormValues["weekday"], { shouldValidate: true })
             }
           />
 
