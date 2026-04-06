@@ -34,7 +34,7 @@ export function AuthScreen({ eyebrow, title, description, children }: AuthScreen
       <div className="pointer-events-none absolute inset-0 bg-grid-mask opacity-35" />
       <div className="relative grid w-full max-w-6xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <GlassPanel className="hidden overflow-hidden p-8 lg:block">
-          <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
+          <div className="absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-primary/60 to-transparent" />
           <div className="relative flex h-full flex-col justify-between gap-10">
             <div className="space-y-10">
               <BrandMark />
@@ -48,7 +48,7 @@ export function AuthScreen({ eyebrow, title, description, children }: AuthScreen
                 <p className="max-w-xl text-sm leading-7 text-muted-foreground">{description}</p>
               </div>
             </div>
-            <div className="grid gap-4">
+            {/* <div className="grid gap-4">
               {bullets.map((item) => {
                 const Icon = item.icon;
 
@@ -69,7 +69,7 @@ export function AuthScreen({ eyebrow, title, description, children }: AuthScreen
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </GlassPanel>
 

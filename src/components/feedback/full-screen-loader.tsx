@@ -7,7 +7,7 @@ type FullScreenLoaderProps = {
 export function FullScreenLoader({ label }: FullScreenLoaderProps) {
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
-      <div className="flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-border/70 bg-card/88 px-6 py-8 text-center shadow-[0_24px_80px_rgba(74,34,140,0.24)] backdrop-blur-xl">
+      <div className="flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-border/70 bg-card/88 px-6 py-8 text-center shadow-[0_24px_80px_rgba(18,88,181,0.22)] backdrop-blur-xl">
         <div className="flex size-14 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
           <LoaderCircle className="size-6 animate-spin" />
         </div>

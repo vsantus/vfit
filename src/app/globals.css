@@ -52,72 +52,72 @@
   --font-sans: "Aptos", "Segoe UI", "Helvetica Neue", sans-serif;
   --font-heading: "Bahnschrift", "Arial Narrow", "Aptos", sans-serif;
   --font-mono: "Cascadia Code", "Consolas", monospace;
-  --background: #f7f4ff;
-  --foreground: #1f1634;
-  --card: rgb(252 250 255 / 0.92);
-  --card-foreground: #1f1634;
-  --popover: #fcfaff;
-  --popover-foreground: #1f1634;
-  --primary: #7c3aed;
-  --primary-foreground: #f8f4ff;
-  --secondary: #ede6ff;
-  --secondary-foreground: #44207e;
-  --muted: #f1ebff;
-  --muted-foreground: #6b5b92;
-  --accent: #a855f7;
-  --accent-foreground: #ffffff;
+  --background: #f0f5ff;
+  --foreground: #18212f;
+  --card: rgb(251 253 255 / 0.92);
+  --card-foreground: #18212f;
+  --popover: #fcfdff;
+  --popover-foreground: #18212f;
+  --primary: #1877f2;
+  --primary-foreground: #f7fbff;
+  --secondary: #e7f0ff;
+  --secondary-foreground: #1f4d91;
+  --muted: #eef4ff;
+  --muted-foreground: #62738d;
+  --accent: #63a4ff;
+  --accent-foreground: #082c5c;
   --destructive: oklch(0.63 0.18 26);
-  --border: rgb(124 58 237 / 0.16);
-  --input: rgb(245 240 255 / 0.96);
-  --ring: rgb(139 92 246 / 0.34);
-  --chart-1: #7c3aed;
-  --chart-2: #6d28d9;
-  --chart-3: #8b5cf6;
-  --chart-4: #9333ea;
-  --chart-5: #c084fc;
+  --border: rgb(24 119 242 / 0.15);
+  --input: rgb(244 248 255 / 0.96);
+  --ring: rgb(78 156 248 / 0.34);
+  --chart-1: #1877f2;
+  --chart-2: #166fe5;
+  --chart-3: #4e9cf8;
+  --chart-4: #63a4ff;
+  --chart-5: #8cc0ff;
   --radius: 1.125rem;
-  --sidebar: rgb(249 246 255 / 0.9);
-  --sidebar-foreground: #1f1634;
-  --sidebar-primary: #7c3aed;
-  --sidebar-primary-foreground: #f8f4ff;
-  --sidebar-accent: #ede6ff;
-  --sidebar-accent-foreground: #4a2885;
-  --sidebar-border: rgb(124 58 237 / 0.13);
-  --sidebar-ring: rgb(139 92 246 / 0.34);
+  --sidebar: rgb(246 250 255 / 0.92);
+  --sidebar-foreground: #18212f;
+  --sidebar-primary: #1877f2;
+  --sidebar-primary-foreground: #f7fbff;
+  --sidebar-accent: #e7f0ff;
+  --sidebar-accent-foreground: #22539a;
+  --sidebar-border: rgb(24 119 242 / 0.13);
+  --sidebar-ring: rgb(78 156 248 / 0.34);
 }
 
 .dark {
-  --background: #140f24;
-  --foreground: #f5eeff;
-  --card: rgb(28 20 48 / 0.9);
-  --card-foreground: #f5eeff;
-  --popover: #1b1430;
-  --popover-foreground: #f5eeff;
-  --primary: #8b5cf6;
-  --primary-foreground: #140f24;
-  --secondary: #24183f;
-  --secondary-foreground: #ddcbff;
-  --muted: #201733;
-  --muted-foreground: #bfb0de;
-  --accent: #a855f7;
-  --accent-foreground: #fff7ff;
+  --background: #101923;
+  --foreground: #ecf4ff;
+  --card: rgb(20 30 41 / 0.92);
+  --card-foreground: #ecf4ff;
+  --popover: #16212d;
+  --popover-foreground: #ecf4ff;
+  --primary: #4e9cf8;
+  --primary-foreground: #081320;
+  --secondary: #1b2a3c;
+  --secondary-foreground: #c9e0ff;
+  --muted: #172434;
+  --muted-foreground: #a8bfdc;
+  --accent: #63a4ff;
+  --accent-foreground: #081a31;
   --destructive: oklch(0.64 0.18 26);
-  --border: rgb(139 92 246 / 0.2);
-  --input: rgb(37 26 63 / 0.96);
-  --ring: rgb(192 132 252 / 0.44);
-  --chart-1: #8b5cf6;
-  --chart-2: #7c3aed;
-  --chart-3: #a855f7;
-  --chart-4: #9333ea;
-  --chart-5: #c084fc;
-  --sidebar: rgb(22 16 37 / 0.92);
-  --sidebar-foreground: #f5eeff;
-  --sidebar-primary: #8b5cf6;
-  --sidebar-primary-foreground: #140f24;
-  --sidebar-accent: #261a44;
-  --sidebar-accent-foreground: #ddcbff;
-  --sidebar-border: rgb(139 92 246 / 0.14);
-  --sidebar-ring: rgb(192 132 252 / 0.44);
+  --border: rgb(78 156 248 / 0.2);
+  --input: rgb(24 38 53 / 0.96);
+  --ring: rgb(99 164 255 / 0.4);
+  --chart-1: #4e9cf8;
+  --chart-2: #1877f2;
+  --chart-3: #63a4ff;
+  --chart-4: #8cc0ff;
+  --chart-5: #b9d8ff;
+  --sidebar: rgb(15 24 34 / 0.94);
+  --sidebar-foreground: #ecf4ff;
+  --sidebar-primary: #4e9cf8;
+  --sidebar-primary-foreground: #081320;
+  --sidebar-accent: #1b2a3c;
+  --sidebar-accent-foreground: #c9e0ff;
+  --sidebar-border: rgb(78 156 248 / 0.14);
+  --sidebar-ring: rgb(99 164 255 / 0.4);
 }
 
 @layer base {
@@ -132,18 +132,18 @@
   body {
     @apply min-h-screen bg-background text-foreground;
     background-image:
-      radial-gradient(circle at 12% 10%, rgb(124 58 237 / 0.16), transparent 22%),
-      radial-gradient(circle at 78% 12%, rgb(168 85 247 / 0.14), transparent 26%),
-      radial-gradient(circle at 50% 0%, rgb(192 132 252 / 0.14), transparent 34%),
-      linear-gradient(180deg, rgb(248 244 255) 0%, rgb(242 236 255) 42%, rgb(237 231 255) 100%);
+      radial-gradient(circle at 12% 10%, rgb(24 119 242 / 0.16), transparent 22%),
+      radial-gradient(circle at 78% 12%, rgb(99 164 255 / 0.12), transparent 26%),
+      radial-gradient(circle at 50% 0%, rgb(140 192 255 / 0.12), transparent 34%),
+      linear-gradient(180deg, rgb(244 249 255) 0%, rgb(237 244 255) 42%, rgb(231 241 255) 100%);
   }
 
   .dark body {
     background-image:
-      radial-gradient(circle at 14% 12%, rgb(124 58 237 / 0.24), transparent 22%),
-      radial-gradient(circle at 84% 8%, rgb(168 85 247 / 0.18), transparent 28%),
-      radial-gradient(circle at 50% 0%, rgb(192 132 252 / 0.14), transparent 34%),
-      linear-gradient(180deg, rgb(18 13 31) 0%, rgb(24 17 40) 42%, rgb(30 21 50) 100%);
+      radial-gradient(circle at 14% 12%, rgb(24 119 242 / 0.24), transparent 22%),
+      radial-gradient(circle at 84% 8%, rgb(99 164 255 / 0.16), transparent 28%),
+      radial-gradient(circle at 50% 0%, rgb(140 192 255 / 0.12), transparent 34%),
+      linear-gradient(180deg, rgb(13 22 31) 0%, rgb(16 27 38) 42%, rgb(18 31 45) 100%);
   }
 
   h1,
@@ -154,8 +154,8 @@
   }
 
   ::selection {
-    background: rgb(139 92 246 / 0.32);
-    color: #f8f4ff;
+    background: rgb(78 156 248 / 0.32);
+    color: #f7fbff;
   }
 }
 
@@ -171,20 +171,20 @@
   .surface-glow {
     box-shadow:
       inset 0 1px 0 rgb(255 255 255 / 0.06),
-      0 20px 54px rgb(95 46 193 / 0.14),
-      0 0 0 1px rgb(192 132 252 / 0.08);
+      0 20px 54px rgb(18 88 181 / 0.14),
+      0 0 0 1px rgb(140 192 255 / 0.08);
   }
 
   .dark .surface-glow {
     box-shadow:
       inset 0 1px 0 rgb(255 255 255 / 0.05),
-      0 20px 54px rgb(11 7 24 / 0.42),
-      0 0 0 1px rgb(192 132 252 / 0.1);
+      0 20px 54px rgb(6 13 22 / 0.42),
+      0 0 0 1px rgb(140 192 255 / 0.1);
   }
 
   .premium-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: rgb(124 58 237 / 0.32) transparent;
+    scrollbar-color: rgb(24 119 242 / 0.32) transparent;
   }
 
   .premium-scrollbar::-webkit-scrollbar {
@@ -193,7 +193,7 @@
   }
 
   .premium-scrollbar::-webkit-scrollbar-thumb {
-    background: rgb(124 58 237 / 0.26);
+    background: rgb(24 119 242 / 0.24);
     border-radius: 999px;
   }
 

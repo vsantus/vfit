@@ -180,7 +180,7 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
       <GlassPanel className={cn("p-6 sm:p-8", allCompleted && "border-primary/30 bg-primary/8")}>
         <div className="space-y-5">
           <div className="flex items-center gap-3">
-            <div className="flex size-12 items-center justify-center rounded-[1.1rem] border border-primary/20 bg-primary/10 text-primary shadow-[0_8px_18px_rgba(124,58,237,0.2)]">
+            <div className="flex size-12 items-center justify-center rounded-[1.1rem] border border-primary/20 bg-primary/10 text-primary shadow-[0_8px_18px_rgba(24,119,242,0.18)]">
               {allCompleted ? <Flame className="size-5" /> : <Dumbbell className="size-5" />}
             </div>
             <div>
@@ -207,7 +207,7 @@ export function WorkoutExecution({ workoutId }: WorkoutExecutionProps) {
                   className={cn(
                     "flex w-full items-start gap-4 rounded-3xl border px-4 py-4 text-left transition-all",
                     checked
-                      ? "border-primary/22 bg-primary/10 shadow-[0_12px_28px_rgba(124,58,237,0.18)]"
+                      ? "border-primary/22 bg-primary/10 shadow-[0_12px_28px_rgba(24,119,242,0.16)]"
                       : "border-border/70 bg-card/70 hover:border-primary/12 hover:bg-card/86",
                   )}
                 >

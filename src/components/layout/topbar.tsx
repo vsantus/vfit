@@ -14,7 +14,7 @@ export function Topbar() {
           <ThemeToggle />
 
           <div className="ml-auto flex items-center gap-3 rounded-[1.2rem] border border-border/70 bg-card/80 px-3 py-2.5">
-            <div className="flex size-9 items-center justify-center rounded-[0.9rem] border border-primary/18 bg-primary/14 text-sm font-semibold text-primary shadow-[0_8px_18px_rgba(124,58,237,0.22)]">
+            <div className="flex size-9 items-center justify-center rounded-[0.9rem] border border-primary/18 bg-primary/14 text-sm font-semibold text-primary shadow-[0_8px_18px_rgba(24,119,242,0.2)]">
               VF
             </div>
             <div className="hidden text-left sm:block">

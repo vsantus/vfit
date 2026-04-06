@@ -17,7 +17,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <GlassPanel className="hidden h-[calc(100vh-1.5rem)] w-[316px] flex-col p-5 xl:flex">
+    <GlassPanel className="hidden h-[calc(100vh-1.5rem)] w-79 flex-col p-5 xl:flex">
       <div className="flex h-full flex-col">
         <BrandMark />
 
@@ -42,7 +42,7 @@ export function Sidebar() {
                     className={[
                       "mt-0.5 flex size-11 items-center justify-center rounded-[1rem] border bg-background/72 transition-all",
                       active
-                        ? "border-primary/18 bg-primary/8 text-primary shadow-[0_8px_18px_rgba(124,58,237,0.22)]"
+                        ? "border-primary/18 bg-primary/8 text-primary shadow-[0_8px_18px_rgba(24,119,242,0.2)]"
                         : "border-border/70 text-muted-foreground group-hover:border-primary/12 group-hover:text-foreground",
                     ].join(" ")}
                   >
